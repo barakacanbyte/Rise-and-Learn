@@ -9,12 +9,12 @@ const Header = ({ path, User }) => {
     <header>
       <div class="logo-container">
         <Link to="/">
-          <img src="assets/ribbon.png" class="logo" />
+          <img src="Rise_and_Learn.png" className="w-[85px]" />
         </Link>
         <Link to="/">
           <div class="logo-text">
-            <h1 class="logo-header">NON PROFIT</h1>
-            <p>ORGANISATION</p>
+            <h1 class="logo-header">RISE AND LEARN</h1>
+            <p>FOUNDATION</p>
           </div>
         </Link>
       </div>

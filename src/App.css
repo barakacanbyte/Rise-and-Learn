@@ -42,6 +42,14 @@
   --red: #f13c4a;
   --white: #ffffff;
   --blue: #021422;
+
+  --orange-light: #F39C12;
+  --orange-dark: #D35400;
+  --orange-pale: #FAE5D3;
+
+  --green-light: #40916C;
+  --green-dark: #081C15;
+  --green-pale: #D8F3DC;
 }
 
 * {
@@ -133,8 +141,8 @@ header {
 .logo-header {
   letter-spacing: -1px;
   font-size: 2rem;
-  color: var(--red);
-  -webkit-text-stroke: 2px var(--red);
+  color: var(--orange-dark);
+  -webkit-text-stroke: 2px var(--orange-dark);
   font-weight: 900;
 }
 .header-links {
