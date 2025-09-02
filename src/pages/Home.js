@@ -22,35 +22,50 @@ const Home = () => {
 
   const [data, setdata] = useState([]);
   const [team, setteam] = useState([]);
-  const [help, sethelp] = useState([]);
+  const [help, sethelp] = useState([
+    {
+      photourl: "assets/newrise/donate.png",
+      title: "Make a Donation",
+      descr: "Your financial contribution helps us provide scholarships, educational materials, and learning resources to students in need. Every donation makes a difference in a child's educational journey."
+    },
+    {
+      photourl: "assets/newrise/volunteer.png", 
+      title: "Volunteer Your Time",
+      descr: "Join our community of dedicated volunteers. Help with tutoring, mentoring, organizing events, or supporting our administrative activities. Your time and skills can transform lives."
+    },
+    {
+      photourl: "assets/newrise/sponsor.png",
+      title: "Sponsor a Student",
+      descr: "Directly impact a student's future by sponsoring their education. Cover tuition fees, books, supplies, or technology needs to help them succeed in their academic pursuits."
+    }
+  ]);
   const [reviews, setreviews] = useState([]);
-  useEffect(() => {
-    const getCauses = async () => {
-      const res = await axios.get("http://localhost:8000/causes");
-      console.log(res.data);
-      setdata(res.data);
-    };
-    const getMembers = async () => {
-      const res = await axios.get("http://localhost:8000/team_members");
-      console.log(res.data);
-      setteam(res.data);
-    };
-    const getHelp = async () => {
-      const res = await axios.get("http://localhost:8000/help");
-      console.log(res.data);
-      sethelp(res.data);
-    };
-    const getReviews = async () => {
-      const res = await axios.get("http://localhost:8000/reviews/joined");
-      console.log(res.data, "reviews");
-      setreviews(res.data);
-    };
-    console.log(team);
-    getCauses();
-    getReviews();
-    getMembers();
-    getHelp();
-  }, []);
+  // useEffect(() => {
+  //   const getCauses = async () => {
+  //     const res = await axios.get("http://localhost:8000/causes");
+  //     console.log(res.data);
+  //     setdata(res.data);
+  //   };
+  //   const getMembers = async () => {
+  //     const res = await axios.get("http://localhost:8000/team_members");
+  //     console.log(res.data);
+  //     setteam(res.data);
+  //   };
+    // const getHelp = async () => {
+    //   const res = await axios.get("http://localhost:8000/help");
+    //   console.log(res.data);
+    //   sethelp(res.data);
+    // };
+  //   const getReviews = async () => {
+  //     const res = await axios.get("http://localhost:8000/reviews/joined");
+  //     console.log(res.data, "reviews");
+  //     setreviews(res.data);
+  //   };
+  //   console.log(team);
+  //   getCauses();
+  //   getReviews();
+  //   getMembers();
+  // }, []);
 
   const navigate = useNavigate();
   return (
@@ -60,26 +75,26 @@ const Home = () => {
         <div class="diagonal-div-2"></div>
 
         <div class="banner-text">
-          <p class="banner-heading-1">BRING CLEAN WATER TO</p>
-          <p class="banner-heading-2">AN ASIAN VILLAGE</p>
+          <p class="banner-heading-1">EMPOWERING MINDS THROUGH</p>
+          <p class="banner-heading-2">QUALITY EDUCATION</p>
           <p class="banner-heading-3">
-            Access to clean and safe drinking water is a fundamental human
-            right, yet many villages in Asia still struggle with waterborne
-            diseases and the burden of fetching water from distant, contaminated
-            sources.
+            Education is the foundation of progress and hope. Rise and Learn Foundation 
+            is dedicated to breaking barriers to learning, providing educational resources, 
+            and creating opportunities for students to reach their full potential regardless 
+            of their background or circumstances.
           </p>
           <button
             onClick={() => {
               navigate("causes");
             }}
           >
-            Donate Now
+            Support Education
           </button>
         </div>
       </section>
       <section class="help-section">
         <p>
-          HOW COULD <span style={{ color: "var(--red)" }}>YOU HELP ?</span>
+          HOW COULD <span style={{ color: "var(--orange-dark)" }}>YOU HELP ?</span>
         </p>
         <div class="help-container">
           {help.map((e) => {
@@ -88,7 +103,7 @@ const Home = () => {
                 <div class="help-img">
                   <img src={e.photourl} />
                 </div>
-                <h1>{e.title}</h1>
+                <h1 className="text-[var(--orange-dark)]">{e.title}</h1>
                 <p>{e.descr}</p>
               </div>
             );
@@ -97,32 +112,33 @@ const Home = () => {
       </section>
       <section class="about-us">
         <div class="about-us-1">
-          <img src="assets/about.png" />
+          <img src="assets/newrise/about.jpeg" />
         </div>
         <div class="about-us-2">
           <div class="about-text">
             <p class="about-heading-2">WE ARE</p>
-            <p class="about-heading-2">NON-PROFIT TEAM</p>
+            <p class="about-heading-2">RISE AND LEARN FOUNDATION</p>
             <p class="about-heading-3">
-              We are a team of dedicated individuals, volunteers, and supporters
-              who share a common vision: to alleviate suffering, promote
-              equality, and uplift communities. With unwavering determination
-              and a heartfelt passion for change, we have undertaken numerous
-              projects and initiatives.
+              We are a passionate team of educators, volunteers, and advocates 
+              committed to transforming lives through education. Our mission is 
+              to ensure that every child has access to quality learning opportunities, 
+              regardless of economic barriers. Through scholarships, educational programs, 
+              and community initiatives, we help students rise above challenges and 
+              learn without limits.
             </p>
             <button
               onClick={() => {
                 navigate("causes");
               }}
             >
-              Donate Now
+              Join Our Mission
             </button>
           </div>
         </div>
       </section>
-      <section class="feature-section">
+      {/* <section class="feature-section">
         <p>
-          FEATURED <span style={{ color: "var(--red)" }}>CAUSES</span>
+          FEATURED <span style={{ color: "var(--red)" }}>PROGRAMS</span>
         </p>
 
         <div class="featured-container">
@@ -137,49 +153,24 @@ const Home = () => {
             );
           })}
         </div>
-      </section>
+      </section> */}
 
       <Slider className="w-full flex overflow-hidden">
-        {reviews.map((e) => {
-          return (
-            <section class="testimonials">
-              <h1>WHAT TEAM SAYS</h1>
-
-              <div class="dialog">
-                <img src="assets/quotes.png" />
-                <p style={{ marginBottom: "30px" }}>{e.review_text}</p>
-
-                <div class="triangle"></div>
-                <div className="w-full 0  flex iconT justify-center items-center p-6">
-                  <img src={e.photoUrl} className="rounded-full" />
-                </div>
-                <div>
-                  <span>
-                    <span style={{ color: "var(--red)" }}>
-                      {e.first_name} {e.last_name}
-                    </span>{" "}
-                    | {e.role}
-                  </span>
-                </div>
-              </div>
-            </section>
-          );
-        })}
         {/* <section class="testimonials">
           <h1>WHAT PEOPLE SAY</h1>
 
           <div class="dialog">
             <img src="assets/quotes.png" />
             <p style={{ marginBottom: "30px" }}>
-              People say that life is a journey, and along the way, we encounter
-              joys, sorrows, and countless moments that shape our stories. What
-              we say and do, the connections we make, and the impact we leave on
-              the world are all part of this beautiful narrative
+              Rise and Learn Foundation has been instrumental in changing my life. 
+              Through their scholarship program, I was able to pursue my education 
+              and now I'm giving back to my community. Education truly is the key 
+              to breaking the cycle of poverty and creating lasting change.
             </p>
 
             <div class="triangle"></div>
             <span>
-              <span style={{ color: "var(--red)" }}>JOHN DOE</span> | NGO
+              <span style={{ color: "var(--red)" }}>SARAH JOHNSON</span> | SCHOLARSHIP RECIPIENT
             </span>
           </div>
 

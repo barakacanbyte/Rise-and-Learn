@@ -10,20 +10,16 @@ const HeaderNav = () => {
     <nav>
       <div class="links">
         <a href="https://facebook.com" target="blank">
-          <i class="fa fa-facebook-f i-fb"></i>
+          <i className="fa fa-facebook-f i-fb text-orange-500"></i>
         </a>
         <a href="https://x.com" target="blank">
-          <i class="fa fa-twitter i-tw"></i>
+          <i className="fa fa-twitter i-tw text-orange-500"></i>
         </a>
         <a href="https://linkedin.com" target="blank">
-          <i class="fa fa-linkedin i-ln"></i>
-        </a>
-
-        <a href="https://meta.com" target="blank">
-          <i class="fa fa-vine i-vn"></i>
+          <i className="fa fa-linkedin i-ln text-orange-500"></i>
         </a>
         <a href="https://instagram.com" target="blank">
-          <i class="fa fa-instagram i-ig"></i>
+          <i className="fa fa-instagram i-ig text-orange-500"></i>
         </a>
       </div>
     </nav>

@@ -13,23 +13,23 @@ const Events = () => {
   const [Ldata, setLdata] = useState([
     { title: "", photo_url: "", date: "", address: "", city: "" },
   ]);
-  useEffect(() => {
-    const getEvents = async () => {
-      const res = await axios.get("http://localhost:8000/events");
-      console.log(res.data);
-      setdata(res.data);
-    };
-    getEvents();
-    const getEventLatest = async () => {
-      const res = await axios.get("http://localhost:8000/events/latest");
-      console.log(res.data);
-      setLdata(res.data);
-    };
-    getEventLatest();
-  }, []);
+  // useEffect(() => {
+  //   const getEvents = async () => {
+  //     const res = await axios.get("http://localhost:8000/events");
+  //     console.log(res.data);
+  //     setdata(res.data);
+  //   };
+  //   getEvents();
+  //   const getEventLatest = async () => {
+  //     const res = await axios.get("http://localhost:8000/events/latest");
+  //     console.log(res.data);
+  //     setLdata(res.data);
+  //   };
+  //   getEventLatest();
+  // }, []);
   return (
     <div className="w-full mb-[120px]">
-      <div className="w-full h-20 bg-red-500 flex items-center justify-center">
+      <div className="w-full h-20 bg-[var(--orange-dark)] flex items-center justify-center">
         <h1 className="text-white font-sans text-5xl">Events</h1>
       </div>
       <div className="w-full h-[400px] bg-gray-200 flex items-center justify-center relative">
@@ -62,7 +62,7 @@ const Events = () => {
       </div>
       <h1 className="text-center text-5xl mt-5">
         Upcoming{" "}
-        <span className="text-red-500 text-center text-5xl mt-5">Events</span>
+        <span className="text-[var(--orange-dark)] text-center text-5xl mt-5">Events</span>
       </h1>
       <EventsCards data={data} />
     </div>

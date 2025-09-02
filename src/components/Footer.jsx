@@ -69,18 +69,18 @@ const Footer = () => {
                 <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                 <Link to="about">About</Link>
               </li>
-              <li>
+              {/* <li>
                 <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                 <Link to="causes">Causes</Link>
-              </li>
+              </li> */}
               <li>
                 <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                 <Link to="event">Events</Link>
               </li>
-              <li>
+              {/* <li>
                 <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                 <Link to="news">News</Link>
-              </li>
+              </li> */}
               <li>
                 <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                 <Link to="contact">Contact</Link>
@@ -136,8 +136,8 @@ const Footer = () => {
                   <h3>Head Office</h3>
                 </div>
                 <div class="contact-ad">
-                  <p>123, Main Street, Your City</p>
-                  <p>USA 789456</p>
+                  <p>Majengo street, MWANHUZI ward, Meatu District, Simiyu Region</p>
+                  <p>TANZANIA 39412</p>
                 </div>
               </div>
               <div class="contact-card">
@@ -167,7 +167,7 @@ const Footer = () => {
             </div>
           </div>
           <p class="copyright">
-            Copyright @ 2023. Developed by Harshit Chadha. All Rights Reserved.
+            Copyright @ 2025. All Rights Reserved.
           </p>
         </div>
       </section>
