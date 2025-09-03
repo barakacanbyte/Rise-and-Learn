@@ -585,11 +585,11 @@ footer {
   position: relative;
 }
 .contact {
-  width: 80%;
+  width: 50%;
   position: absolute;
   height: 100px;
   background-image: url(/public/assets/newrise/back.png);
-  left: 10%;
+  left: 25%;
   top: -50px;
   color: white;
   display: flex;
@@ -602,7 +602,7 @@ footer {
 }
 .contact P.question {
   font-size: 1.2rem;
-  width: 25%;
+  
 }
 .contact P.number {
   font-size: 2.5rem;

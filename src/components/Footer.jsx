@@ -7,28 +7,17 @@ const Footer = () => {
   const [Contact, setContact] = useState(false);
   return (
     <footer>
-      <section class="contact">
+      <section class="contact w-[50%]">
         <div class="contact-1">
           <i class="fa fa-phone" id="call" aria-hidden="true"></i>
           <p class="question">DO YOU HAVE A QUESTION?</p>
-          <p class="number">+0123 456 789</p>
         </div>
         <div class="contact-2">
-          <div>
-            <i class="fa fa-envelope-o" id="mail" aria-hidden="true"></i>
-            <input
-              type="search"
-              placeholder="Enter email"
-              className="text-black"
-            />
-          </div>
-          <button
-            onClick={() => {
-              alert("subscribed!!!");
-            }}
-          >
-            Subscribe
-          </button>
+          <Link to="/contact">
+            <button className="contact-button">
+              Contact Us
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -37,16 +26,13 @@ const Footer = () => {
           <div class="footer-about">
             <h1>OUR MISSION</h1>
             <p>
-              Bringing clean water to an Asian village is a vital and impactful
-              endeavor that can significantly improve the lives of the
-              community's residents. Access to clean and safe drinking water is
-              a fundamental human right
+              At Rise and Learn, we are dedicated to transforming lives through education and empowerment. 
+              We believe every child deserves access to quality education and the opportunity to reach their full potential.
             </p>
             <br />
             <p>
-              Initiatives focused on delivering clean water to Asian villages
-              serve as a testament to our collective responsibility in ensuring
-              a sustainable and equitable world.
+              Through our flagship programs, we provide scholarships, educational resources, and vocational training,
+              creating sustainable pathways out of poverty and building stronger communities for future generations.
             </p>
           </div>
 
@@ -148,8 +134,8 @@ const Footer = () => {
                   <h3>Phone Number</h3>
                 </div>
                 <div class="contact-ad">
-                  <p>123, Main Street, Your City</p>
-                  <p>USA 789456</p>
+                  <p>+255 767 088 288</p>
+                  <p>+255 757 441 919 </p>
                 </div>
               </div>
               <div class="contact-card">
@@ -160,8 +146,7 @@ const Footer = () => {
                   <h3>Email</h3>
                 </div>
                 <div class="contact-ad">
-                  <p>123, Main Street, Your City</p>
-                  <p>USA 789456</p>
+                  <p>riseandlearn01@gmail.com</p>
                 </div>
               </div>
             </div>

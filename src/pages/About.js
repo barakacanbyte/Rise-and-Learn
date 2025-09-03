@@ -1,5 +1,7 @@
 import React from "react";
 import "../App.css";
+import TeamGrid from "../components/TeamGrid";
+import { teamMembers } from "../data/team";
 // Removed imported Card/AboutCard and created a custom, scalable card below
 
 // --- Custom Milestone Card (scales nicely for 1 or many items) ---
@@ -114,6 +116,21 @@ const About = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      
+      {/* Team Section */}
+      <section className="w-full bg-white py-12 sm:py-16">
+        <div className="mx-auto w-[92%] max-w-7xl">
+          <div className="mb-8 sm:mb-10 text-center">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
+              Our <span className="text-[var(--orange-dark)]">Team</span>
+            </h2>
+            <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
+              Meet the dedicated individuals who make our mission possible
+            </p>
+          </div>
+          <TeamGrid members={teamMembers} />
         </div>
       </section>
     </div>
