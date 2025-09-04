@@ -57,13 +57,13 @@ const Header = ({ path, User }) => {
               </a>
             </li>
           </Link>
-          {/* <Link to="/causes" className="w-[100%] lg:w-auto">
+          <Link to="/causes" className="w-[100%] lg:w-auto">
             <li>
               <a href="#" style={{ color: path == "/causes" ? "#D35400" : "" }}>
-                Causes
+                Donate
               </a>
             </li>
-          </Link> */}
+          </Link>
           <Link to="/events" className="w-[100%] lg:w-auto">
             <li>
               <a href="#" style={{ color: path == "/events" ? "#D35400" : "" }}>

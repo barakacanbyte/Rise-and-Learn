@@ -6,7 +6,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FeaturedCard from "../components/FeaturedCard";
-
+import TeamGrid from "../components/TeamGrid";
+import { teamMembers } from "../data/team";
 
 const Home = () => {
   React.useEffect(() => {
@@ -118,7 +119,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Keep slider as-is if you plan to use it */}
       <Slider className="w-full flex overflow-hidden" {...settings}></Slider>
 
@@ -127,7 +128,7 @@ const Home = () => {
           OUR <span style={{ color: "var(--red)" }}>TEAM</span>
         </p>
 
-        
+        <TeamGrid members={teamMembers} />
         
       </section>
     </div>

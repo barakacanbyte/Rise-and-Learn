@@ -723,7 +723,7 @@ h2.links {
 .location {
   width: 30px;
   height: 30px;
-  background-color: var(--red);
+  background-color: var(--orange-dark);
   border-radius: 50%;
   color: white;
   display: flex;
@@ -748,7 +748,7 @@ i.three {
   left: 20%;
 }
 .contact-heading h3 {
-  color: var(--red);
+  color: var(--orange-dark);
   font-size: 1rem;
 }
 
