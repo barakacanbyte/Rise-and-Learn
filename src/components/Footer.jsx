@@ -74,7 +74,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div class="gallery">
+          {/* <div class="gallery">
             <h2
               class="gal-btn"
               onClick={() => {
@@ -97,7 +97,7 @@ const Footer = () => {
                 <img src="assets/gal6.png" />
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div class="contact-footer">
             <h2
@@ -114,7 +114,7 @@ const Footer = () => {
                 "contact-container " + (Contact && "contact-container-active")
               }
             >
-              <div class="contact-card">
+              <div className="contact-card">
                 <div class="contact-heading">
                   <div class="location">
                     <i class="fa fa-map-marker one" aria-hidden="true"></i>

@@ -30,12 +30,12 @@ const Causes = () => {
           <div className="p-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Bank Transfer Details</h2>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-3 gap-8 mb-12">
               <div className="bg-gray-50 p-6 rounded-lg text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <FaUniversity className="text-orange-600 text-2xl" />
                 </div>
-                <h3 className="text-lg font-medium text-gray-900">Bank Name</h3>
+                <h3 className="text-lg font-medium text-gray-900">Bank</h3>
                 <p className="mt-2 text-gray-600">{bankDetails.bank}</p>
               </div>
               

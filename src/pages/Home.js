@@ -22,26 +22,22 @@ const Home = () => {
     slidesToScroll: 1,
   };
 
-  // Removed: team state & axios fetching
   const [data, setdata] = useState([]);
   const [help, sethelp] = useState([
     {
-      photourl: "assets/newrise/donate.png",
+      photourl: "assets/newrise/donate.jpeg", // Updated to real image
       title: "Make a Donation",
-      descr:
-        "Your financial contribution helps us provide scholarships, educational materials, and learning resources to students in need. Every donation makes a difference in a child's educational journey.",
+      descr: "Your financial contribution helps us provide scholarships, educational materials, and learning resources to students in need. Every donation makes a difference in a child's educational journey.",
     },
     {
-      photourl: "assets/newrise/volunteer.png",
+      photourl: "assets/newrise/volunteer.jpeg", // Updated to real image
       title: "Volunteer Your Time",
-      descr:
-        "Join our community of dedicated volunteers. Help with tutoring, mentoring, organizing events, or supporting our administrative activities. Your time and skills can transform lives.",
+      descr: "Join our community of dedicated volunteers. Help with tutoring, mentoring, organizing events, or supporting our administrative activities. Your time and skills can transform lives.",
     },
     {
-      photourl: "assets/newrise/sponsor.png",
+      photourl: "assets/newrise/sponsor.jpg", // Updated to real image
       title: "Sponsor a Student",
-      descr:
-        "Directly impact a student's future by sponsoring their education. Cover tuition fees, books, supplies, or technology needs to help them succeed in their academic pursuits.",
+      descr: "Directly impact a student's future by sponsoring their education. Cover tuition fees, books, supplies, or technology needs to help them succeed in their academic pursuits.",
     },
   ]);
 
@@ -81,19 +77,32 @@ const Home = () => {
         <div className="help-container">
           {help.map((e, i) => {
             return (
-              <div className="cards" key={i}>
-                <div className="help-img">
-                  <img src={e.photourl} alt={e.title} />
+              <div className="help-card" key={i}>
+                <div className="help-img-container">
+                  <img src={e.photourl} alt={e.title} className="help-real-img" />
+                  <div className="help-overlay">
+                    <h3>{e.title}</h3>
+                  </div>
                 </div>
-                <h1 className="text-[var(--orange-dark)]">{e.title}</h1>
-                <p>{e.descr}</p>
+                <div className="help-content">
+                  <p>{e.descr}</p>
+                  <button 
+                    className="help-button"
+                    onClick={() => {
+                      navigate("causes");
+                    }}
+                  >
+                    Learn More
+                  </button>
+                </div>
               </div>
             );
           })}
         </div>
       </section>
 
-      <section className="about-us">
+      {/* Rest of the component remains the same */}
+      <section className="about-us ">
         <div className="about-us-1">
           <img src="assets/newrise/about.jpeg" alt="About Rise and Learn" />
         </div>
@@ -120,7 +129,6 @@ const Home = () => {
         </div>
       </section>
       
-      {/* Keep slider as-is if you plan to use it */}
       <Slider className="w-full flex overflow-hidden" {...settings}></Slider>
 
       <section className="volunteer">
@@ -129,7 +137,6 @@ const Home = () => {
         </p>
 
         <TeamGrid members={teamMembers} />
-        
       </section>
     </div>
   );
