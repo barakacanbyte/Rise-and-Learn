@@ -134,33 +134,7 @@ const Team = () => {
           </div>
         </div>
       </section>
-
-      {/* Call to Action Section */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            Join Our <span className="text-orange-400">Mission</span>
-          </h2>
-          <p className="text-lg sm:text-xl lg:text-2xl mb-12 opacity-90 leading-relaxed max-w-3xl mx-auto">
-            Are you passionate about making a difference in children's lives? 
-            We're always looking for dedicated individuals to join our mission of transforming communities through education and empowerment.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-            {/* <button className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-full text-lg uppercase tracking-wider hover:from-orange-600 hover:to-red-600 transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-              View Opportunities
-            </button> */}
-            <button className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full text-lg uppercase tracking-wider hover:bg-white hover:text-gray-900 transform hover:-translate-y-1 transition-all duration-300">
-              Volunteer With Us
-            </button>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };
