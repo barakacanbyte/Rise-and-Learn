@@ -85,14 +85,13 @@ const Header = ({ path, User }) => {
               </a>
             </li>
           </Link>
-          {/* <Link to="login" className="w-[100%] lg:w-auto">
+          <Link to="team" className="w-[100%] lg:w-auto">
             <li>
-              <a href="#" style={{ color: path == "/login" ? "red" : "" }}>
-                <i class="fa fa-user" aria-hidden="true"></i>
-                {User && User.username ? User.username : " Sign in"}
+              <a href="#" style={{ color: path == "/team" ? "#D35400" : "" }}>
+                Team
               </a>
             </li>
-          </Link> */}
+          </Link>
         </ul>
       </div>
     </header>

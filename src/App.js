@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import News from "./pages/News";
 import Events from "./pages/Event";
 import Login from "./pages/Login";
+import Team from "./pages/Team";
 import UseGlobal from "./hooks/UseGlobal";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -36,6 +37,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="news" element={<News />} />
           <Route path="events" element={<Events />} />
+          <Route path="team" element={<Team />} />
           <Route
             path="login"
             element={<Login User={User} setUser={setUser} />}
