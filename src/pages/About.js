@@ -25,8 +25,8 @@ const MilestoneCard = ({ title, year, description, img }) => {
           {title}
         </h3>
       </div>
-      <div className="space-y-3 p-5">
-        <p className="text-pretty text-gray-700">{description}</p>
+      <div className="space-y-3 p-5 bg-[var(--orange-dark)]">
+        <p className="text-pretty text-gray-100">{description}</p>
         {/* <div className="flex items-center justify-between pt-1 text-xs text-gray-500">
           <span className="italic">Rise & Learn Foundation</span>
           <span className="opacity-75">Milestone</span>
@@ -82,10 +82,10 @@ const About = () => {
       </div>
 
       {/* Milestones Section */}
-      <section className="w-full bg-[var(--orange-dark)] py-12 sm:py-16">
+      <section className="w-full bg-[var(--orange-dark)]/80 py-12 sm:py-16">
         <div className="mx-auto w-[92%] max-w-7xl">
           <div className="mb-8 sm:mb-10 text-center">
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-green-900">
               Our Milestones
             </h2>
             {/* <p className="mt-2 text-white/90">
@@ -120,7 +120,7 @@ const About = () => {
       </section>
       
       {/* Team Section */}
-      <section className="w-full bg-white py-12 sm:py-16">
+      {/* <section className="w-full bg-white py-12 sm:py-16">
         <div className="mx-auto w-[92%] max-w-7xl">
           <div className="mb-8 sm:mb-10 text-center">
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
@@ -132,7 +132,7 @@ const About = () => {
           </div>
           <TeamGrid members={teamMembers} />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

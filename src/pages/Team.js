@@ -73,7 +73,7 @@ const Team = () => {
                 <div className="lg:w-1/2 flex justify-center">
                   <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-3xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-500">
                     <img
-                      src={member.image || 'assets/newrise/volunteer.jpeg'}
+                      src="assets/newrise/placeholder-image.png"
                       alt={member.name}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />

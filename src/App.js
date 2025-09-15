@@ -12,21 +12,21 @@ import Login from "./pages/Login";
 import Team from "./pages/Team";
 import UseGlobal from "./hooks/UseGlobal";
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 function App() {
   const { getUser } = UseGlobal();
   const [User, setUser] = useState(getUser());
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    const checkSession = async () => {
-      const res = await axios.get("http://localhost:8000/user/login", {
-        withCredentials: true,
-      });
-      setUser(res.data.session);
-    };
-    checkSession();
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  //   const checkSession = async () => {
+  //     const res = await axios.get("http://localhost:8000/user/login", {
+  //       withCredentials: true,
+  //     });
+  //     setUser(res.data.session);
+  //   };
+  //   checkSession();
+  // }, []);
   return (
     <BrowserRouter>
       <Routes>

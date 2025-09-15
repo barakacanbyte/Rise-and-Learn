@@ -89,7 +89,7 @@ const Home = () => {
                   <button 
                     className="help-button"
                     onClick={() => {
-                      navigate("causes");
+                      navigate("about");
                     }}
                   >
                     Learn More
@@ -131,13 +131,60 @@ const Home = () => {
       
       <Slider className="w-full flex overflow-hidden" {...settings}></Slider>
 
-      <section className="volunteer">
-        <p className="title">
-          OUR <span style={{ color: "var(--red)" }}>TEAM</span>
-        </p>
+      {/* Donors / Partners */}
+<section
+  aria-labelledby="donors-heading"
+  className="py-16 bg-gray-50"
+>
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2
+      id="donors-heading"
+      className="text-center text-3xl font-bold tracking-tight text-gray-900"
+    >
+      OUR <span className="text-red-600">DONORS</span>
+    </h2>
+    <p className="mt-3 text-center text-gray-600">
+      We gratefully acknowledge the generous support of our donors.
+    </p>
 
-        <TeamGrid members={teamMembers} />
-      </section>
+    {/* if/when you have multiple donors, just add them to this array */}
+    {(() => {
+      const donors = [
+        {
+          name: "Polish Humanitarian Action (PAH)",
+          url: "https://www.pah.org.pl/en/",
+          // try a local asset first; it will gracefully fall back to a placeholder if missing
+          logo: "assets/newrise/pha-svg.png",
+          placeholder: "https://via.placeholder.com/240x80?text=PAH+Logo",
+        },
+      ];
+
+      return (
+        <ul
+          className="mt-10 flex gap-6 items-center justify-center mx-auto"
+          role="list"
+        >
+          {donors.map((d) => (
+            <li key={d.name} className="flex mx-auto">
+              
+                <img
+                  src={d.logo}
+                  alt={`${d.name} logo`}
+                  loading="lazy"
+                  className="mx-auto h-20 w-auto object-contain transition mx-auto"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = d.placeholder;
+                  }}
+                />
+                <span className="sr-only">{d.name}</span>
+            </li>
+          ))}
+        </ul>
+      );
+    })()}
+  </div>
+</section>
     </div>
   );
 };
